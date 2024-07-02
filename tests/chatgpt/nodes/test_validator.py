@@ -1,7 +1,7 @@
 import pytest
 from unittest.mock import patch, Mock, AsyncMock
 
-from chatgpt.nodes.validator import Validator, PeerScoringTask
+from hotdog.nodes.validator import Validator, PeerScoringTask
 from vana.config import Config
 
 

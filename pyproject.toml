@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "chatgpt"
+name = "hotdog"
 version = "0.1.0"
 description = ""
 authors = ["Tim Nunamaker <tim@vana.com>", "Volodymyr Isai <volod@vana.com>", "Kahtaf Alam <kahtaf@vana.com>"]

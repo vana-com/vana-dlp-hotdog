@@ -1,9 +1,9 @@
-# Running the ChatGPT DLP on Testnet
+# Running the Hot Dog DLP on Testnet
 
-This tutorial introduces the concept of data liquidity pools and proof of contribution by having you create your own data liquidity pool and validators. It is based on the standard [smart contract template](https://github.com/vana-com/vana-dlp-smart-contracts/tree/2ada9aac3a54dc193903fb4d0e0886bfe7c92e1f) and [validator template](https://github.com/vana-com/vana-dlp-chatgpt), and will take about 1 hour to get setup. You will:
+This tutorial introduces the concept of data liquidity pools and proof of contribution by having you create your own data liquidity pool and validators. It is based on the standard [smart contract template](https://github.com/vana-com/vana-dlp-smart-contracts/tree/2ada9aac3a54dc193903fb4d0e0886bfe7c92e1f) and [validator template](https://github.com/vana-com/vana-dlp-hotdog), and will take about 1 hour to get setup. You will:
 - Deploy a data liquidity pool smart contract
-- Register validators to run proof of contribution, ensuring chatGPT data quality
-- Submit ChatGPT data to test that proof of contribution is working
+- Register validators to run proof of contribution, ensuring hot dog data quality
+- Submit hot dog data to test that proof of contribution is working
 
 By continuing in this tutorial, you agree to the following
 - The testnet is provided solely on an “as is” and “as available” basis for experimental purposes. The functionality of the testnet remains experimental and has not undergone comprehensive testing.
@@ -26,8 +26,8 @@ real DAT, they cost you test DAT which you must get from a faucet. Testnet token
 Make sure to install the project dependencies:
 
 ```bash
-git clone https://github.com/vana-com/vana-dlp-chatgpt.git
-cd vana-dlp-chatgpt
+git clone https://github.com/vana-com/vana-dlp-hotdog.git
+cd vana-dlp-hotdog
 poetry install
 ```
 
@@ -99,14 +99,14 @@ You are funding the coldkey wallets for use on the network.
 You're now ready to deploy a DLP smart contract, creating your own data DAO. You will then register two validators through the smart contract. The validators will be running proof of contribution. 
 
 1. Install hardhat: https://hardhat.org/hardhat-runner/docs/getting-started#installation
-2. Clone the DLP Smart Contract Repo: https://github.com/vana-com/vana-dlp-smart-contracts/tree/b282a05176b9bbe61ceae5811e8f1dd3aee72a5a (this version is compatible with the latest vana-dlp-chatgpt)
+2. Clone the DLP Smart Contract Repo: https://github.com/vana-com/vana-dlp-smart-contracts/tree/b282a05176b9bbe61ceae5811e8f1dd3aee72a5a (this version is compatible with the latest vana-dlp-hotdog)
 3. Install dependencies
 
 ```bash
 yarn install
 ```
 
-4. Create an `.env` file for the smart contract repo. You will need the owner address and private key. You can create a new key by following [the instructions on the README](https://github.com/vana-com/vana-dlp-chatgpt?tab=readme-ov-file#generate-validator-encryption-keys).
+4. Create an `.env` file for the smart contract repo. You will need the owner address and private key. You can create a new key by following [the instructions on the README](https://github.com/vana-com/vana-dlp-hotdog?tab=readme-ov-file#generate-validator-encryption-keys).
 
 ```bash
 jq -r '.address' ~/.vana/wallets/owner/coldkey
@@ -158,7 +158,7 @@ If you didn't make changes, contracts should be verified automatically. You may 
 
    These steps ensure that rewards can be claimed immediately and that there are sufficient tokens allocated for rewards.
 
-9. In `vana-dlp-chatgpt/.env`, add an environment variable `DLP_SATORI_CONTRACT=0x...` and `DLP_TOKEN_SATORI_CONTRACT=0x` (replace with the deployed contract addresses for `DataLiquidityPool` and `DataLiquidityPoolToken` respectively).
+9. In `vana-dlp-hotdog/.env`, add an environment variable `DLP_SATORI_CONTRACT=0x...` and `DLP_TOKEN_SATORI_CONTRACT=0x` (replace with the deployed contract addresses for `DataLiquidityPool` and `DataLiquidityPoolToken` respectively).
 
 ## Fund Validators with DLP specific token
 
@@ -206,10 +206,10 @@ Now that validators are registered, you can run the validator nodes.
 
 ```bash
 # Terminal 1 for validator_4000
-poetry run python -m chatgpt.nodes.validator --node_server.external_ip=127.0.0.1 --node_server.port=4000 --wallet.name=validator_4000
+poetry run python -m hotdog.nodes.validator --node_server.external_ip=127.0.0.1 --node_server.port=4000 --wallet.name=validator_4000
 
 # Terminal 2 for validator_4001
-poetry run python -m chatgpt.nodes.validator --node_server.external_ip=127.0.0.1 --node_server.port=4001 --wallet.name=validator_4001
+poetry run python -m hotdog.nodes.validator --node_server.external_ip=127.0.0.1 --node_server.port=4001 --wallet.name=validator_4001
 ```
 
 ## Send addFile transaction
@@ -234,7 +234,7 @@ The basic steps are:
 4. Fund the **hotkey** address of your wallet with some of the DLP's tokens. You can ask the DLP creator to send you some tokens.
 5. Submit a validator registration transaction: `./vanacli dlp register_validator --wallet.name=validator_4000 --stake_amount 10`.
 6. Ask the DLP owner to accept your registration request.
-7. Run your validator node: `poetry run python -m chatgpt.nodes.validator --node_server.external_ip=127.0.0.1 --node_server.port=4000 --wallet.name=validator_4000`
+7. Run your validator node: `poetry run python -m hotdog.nodes.validator --node_server.external_ip=127.0.0.1 --node_server.port=4000 --wallet.name=validator_4000`
 8. Add a file to the DLP and watch your validator node score it! ([instructions above](#send-addfile-transaction))
 
 > Note: if the DLP has been heavily modified from the starter template, you may not be able to register a validator with the CLI. In this case, you can register it through the [Satori explorer](https://satori.vanascan.io/).

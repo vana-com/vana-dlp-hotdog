@@ -1,6 +1,6 @@
 import pytest
 from unittest.mock import Mock, patch, mock_open, call
-from chatgpt.utils.proof_of_contribution import proof_of_contribution, download_and_decrypt_file
+from hotdog.utils.proof_of_contribution import proof_of_contribution, download_and_decrypt_file
 
 @pytest.fixture
 def mock_file_content():

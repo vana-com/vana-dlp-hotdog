@@ -6,7 +6,7 @@ import vana
 import gnupg
 import base64
 from urllib.parse import urlparse
-from chatgpt.models.contribution import Contribution
+from hotdog.models.contribution import Contribution
 
 
 async def proof_of_contribution(file_id: int, input_url: str, input_encryption_key: str) -> Contribution:

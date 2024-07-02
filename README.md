@@ -25,7 +25,7 @@ Local: 1 CPU, 8GB RAM, 10GB free disk space
 AWS: t3.large, m5.large or better  
 GCP: n1-standard-2 or better  
 
-To get started with the ChatGPT DLP, follow these steps:
+To get started with the Hot Dog DLP, follow these steps:
 
 1. Clone the repository:
 ```shell
