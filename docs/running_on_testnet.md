@@ -218,16 +218,18 @@ For non-DLP creators:
 
 ### Register as a Validator
 
+Note that the following commands use the local hotdog vanacli tool that supports custom `dlp` commands.
+
 1. Register your validator:
    ```bash
-   vanacli dlp register_validator --stake_amount 10
+   ./vanacli dlp register_validator --stake_amount 10
    ```
 
 2. For non-DLP creators, ask the DLP owner to accept your registration.
 
    DLP creators can approve validators with:
    ```bash
-   vanacli dlp approve_validator --validator_address=<your hotkey address from Metamask>
+   ./vanacli dlp approve_validator --validator_address=<your hotkey address from Metamask>
    ```
 
 ### Run Validator Node
