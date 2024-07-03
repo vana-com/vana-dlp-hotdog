@@ -31,7 +31,7 @@ Incentive mechanisms running on the testnet are open to anyone. Although these m
 - Do not expose your private keys or mnemonic phrases.
 - Do not reuse the password of your mainnet wallet.
 
-## Common Setup
+## Setup
 
 Follow these steps to set up your environment, whether you're creating a new DLP or joining an existing one as a validator.
 
@@ -101,6 +101,8 @@ Additional for DLP creators:
 ## Creating a DLP
 
 If you're joining an existing DLP as a validator, skip to the [Validator Setup](#validator-setup) section.
+
+Before you start, ensure you have gone through the [Setup](#setup) section.
 
 ### Generate Encryption Keys
 
@@ -177,6 +179,8 @@ After completing these steps, proceed to the [Validator Setup](#validator-setup)
 ## Validator Setup
 
 Follow these steps whether you're a DLP creator or joining an existing DLP.
+
+Before you start, ensure you have gone through the [Setup](#setup) section.
 
 ### Required Information
 
