@@ -29,7 +29,7 @@ To get started with the Hot Dog DLP, follow these steps:
 
 1. Clone the repository:
 ```shell
-git clone https://github.com/vana-com/vana-dlp-chatgpt.git
+git clone https://github.com/vana-com/vana-dlp-hotdog.git
 ```
 
 2. Install the required dependencies using poetry:
@@ -41,7 +41,7 @@ poetry run setup
 
 4. Run the application:
 ```shell
-poetry run python -m chatgpt.nodes.validator
+poetry run python -m hotdog.nodes.validator
 ```
 
 ## Generate validator encryption keys
@@ -59,7 +59,7 @@ To generate the encryption keypair for DLP validators:
     - `public_key.asc` and `public_key_base64.asc` (for UI)
     - `private_key.asc` and `private_key_base64.asc` (for validators)
 
-4. Copy the contents of `private_key_base64.asc` to `vana-dlp-chatgpt/.env` under `PRIVATE_FILE_ENCRYPTION_PUBLIC_KEY_BASE64`.
+4. Copy the contents of `private_key_base64.asc` to `vana-dlp-hotdog/.env` under `PRIVATE_FILE_ENCRYPTION_PUBLIC_KEY_BASE64`.
 
 5. Paste the public key into the [DLP Demo UI](https://dlp-ui.vercel.vana.com/claim/upload) (settings icon on the top right)
 

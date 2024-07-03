@@ -123,5 +123,5 @@ def proof_of_authenticity(decrypted_file_path) -> float:
     :param decrypted_file_path:
     :return: authenticity score
     """
-    # TODO: Implement a authenticity check to ensure it originated from chatgpt.com and is not tampered with.
+    # TODO: Implement a authenticity check to ensure it is an authentic hot dog.
     return 0.0
